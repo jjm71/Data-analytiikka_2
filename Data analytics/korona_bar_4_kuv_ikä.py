@@ -12,9 +12,6 @@ df_new = pd.read_csv("fact_epirapo_covid19case_17.csv", encoding="utf-8", skipro
 df_newest = pd.read_csv("fact_epirapo_covid19case_18.csv", encoding="utf-8", skiprows=1, names=headers, delimiter= ";") # nyt
 df_newest_2 = pd.read_csv("fact_epirapo_covid19case_19.csv", encoding="utf-8", skiprows=1, names=headers, delimiter= ";") # nyt
 
-#pd.set_option('display.max_columns', None)  # Printtauksen asetuksia
-#pd.set_option('display.width', 200)         # Printtauksen asetuksia
-print(df_newest_2)
 plt.figure(figsize=(12,7))
 names = df_old['c1']
 x = np.arange(len(names))

@@ -10,7 +10,6 @@ df = pd.read_csv("fact_epirapo_covid19case_viikko_ud.csv", encoding='utf-8', ski
 
 df = df.query('(c1 == "Kaikki Alueet") & (c3 > 0) & (c3 < 2000)')   # Valitaan tekstistä vain nämä rivit jotka täyttää tämän ehdon
 
-print(df)
 plt.figure(figsize=(15,5))      # Kuvan koko
 
 plt.bar(df.c2, df.c3, color='red', alpha=0.5)         # Pylväiden piirto

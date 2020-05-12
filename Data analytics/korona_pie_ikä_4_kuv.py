@@ -14,7 +14,7 @@ df_4 = pd.read_csv("fact_epirapo_covid19case_19.csv", encoding="utf-8", skiprows
 plt.figure(figsize=(12,10))
  
 ax = plt.subplot(221)
-#plt.title('Koronan tartuntojen kehitys ikäryhmittäin')
+
 plt.title('Vk 16', bbox={'facecolor':'0.8', 'pad':1, 'boxstyle':'round'}, position=(0,1))
 ax.pie(df['c2'], labels=df['c1'], autopct='%1.1f%%', shadow=True, startangle=0, radius=1.3, pctdistance=0.85)
 

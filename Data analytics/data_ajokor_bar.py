@@ -20,7 +20,6 @@ arvot_2017 = df.loc[df.c1 == kaupunki]['c9']
 arvot_2018 = df.loc[df.c1 == kaupunki]['c10']
 arvot_2019 = df.loc[df.c1 == kaupunki]['c11']
 
-print(arvot_2019)
 name = df['c5']        # Selitys 'sarake' valittu muuttujaan
 
 x = np.arange(len(arvot_2016))      # valitun 'listan' pituus

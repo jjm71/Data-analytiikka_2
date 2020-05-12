@@ -15,18 +15,9 @@ df_new = pd.read_csv("fact_epirapo_covid19case_2_17.csv", encoding="utf-8", skip
 df_newest = pd.read_csv("fact_epirapo_covid19case_2_18.csv", encoding="utf-8", skiprows=1, names=headers_3, delimiter= ";") 
 df_newest_2 = pd.read_csv("fact_epirapo_covid19case_2_19.csv", encoding="utf-8", skiprows=1, names=headers_4, delimiter= ";") 
 
-#pd.set_option('display.max_columns', None)  # Printtauksen asetuksia
-#pd.set_option('display.width', 200)         # Printtauksen asetuksia
-#print(df_old.sort_values('c2'))
-
 yhd = pd.concat([df_old, df_new['c3'], df_newest['c4'], df_newest_2['c5']], axis=1) # join='inner' # Muodostaa yhden listan jossa kaikki määrät vierekkäin (sarakkeittain)
 
-print(yhd)
-print('---------------------------')
-
 yhd = yhd.sort_values('c5', ascending = True)  # Laittaa järjestykseen sarakkeen 'c5' (määrän) perusteella # .reset_index(drop=True)
-
-print(yhd)
 
 plt.figure(figsize=(14,6))
 names = yhd['c1']
